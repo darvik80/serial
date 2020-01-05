@@ -3,6 +3,8 @@ project(serial)
 
 message(${CMAKE_BINARY_DIR} "test")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fvisibility=hidden")
+
 if(EXISTS ${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
     include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
     conan_basic_setup(NO_OUTPUT_DIRS)
